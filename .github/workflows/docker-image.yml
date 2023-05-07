@@ -82,7 +82,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: wangovst/test-share
+          images: wangovst/share3.15
           tags: |
               latest
               ${{ github.ref }}
@@ -124,7 +124,7 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: wangovst/test-share:latest
+          tags: wangovst/share3.15:latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
